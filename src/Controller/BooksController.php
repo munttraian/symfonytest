@@ -70,7 +70,9 @@ class BooksController extends Controller {
         $volumeArray = array(
             'id' => $volume->getId(),
             'name' => $volume->getName(),
-            'author' => $volume->getAuthor()
+            'author' => $volume->getAuthor(),
+            'description' => $volume->getDescription(),
+            'image' => $volume->getImage()
         );
         
         return new JsonResponse($volumeArray);
