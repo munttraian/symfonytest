@@ -1,0 +1,24 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+books_volumnes_get:
+    path: /api/v1/volumes
+    controller: App\Controller\BooksController::getVolumes 
+    requirements:
+        _format: json
+        methods: GET
+        
+books_volumne_get:
+    path: /api/v1/volume/{id}
+    controller: App\Controller\BooksController::getVolume
+    requirements:
+        _format: json
+        methods: GET        
+        
+books_volume_new:
+    path: /api/v1/volume
+    controller: App\Controller\BooksController::setVolume 
+    requirements:
+        _format: json
+        methods: POST
